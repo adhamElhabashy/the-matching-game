@@ -1,0 +1,14 @@
+<div class="opts-container">
+  <div class="starts-rate">
+    <div class="star-container" *ngFor="let star of numberOfStars">
+      <fa-icon [icon]="star"></fa-icon>
+    </div>
+  </div>
+  <div class="timer">
+    {{ minutes | number : "2.0-0" }}:{{ seconds | number : "2.0-0" }}
+  </div>
+  <div class="moves-number">{{ numberOfMoves }} Moves</div>
+  <div class="reset-button">
+    <button (click)="resetTheGame()">Reset The Game</button>
+  </div>
+</div>

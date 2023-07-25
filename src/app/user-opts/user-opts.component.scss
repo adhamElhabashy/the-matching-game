@@ -1,0 +1,32 @@
+.opts-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin: 20px;
+  padding: 15px;
+  border-radius: 20px;
+  div {
+    width: 25%;
+    &.starts-rate {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      fa-icon {
+        color: #53007a;
+      }
+    }
+    &.reset-button {
+      button {
+        padding: 15px 20px;
+        background-color: #53007a;
+        border: none;
+        color: white;
+        font-weight: bold;
+        font-size: 15px;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+}

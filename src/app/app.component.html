@@ -1,0 +1,17 @@
+<div class="game-root" [ngClass]="{ finished: false }">
+  <h1>Matching Game</h1>
+  <div class="container">
+    <app-user-opts class="user-opts"></app-user-opts>
+    <div class="cards-container">
+      <app-game-card
+        class="cards"
+        (endingEvent)="changeEndingProp($event)"
+      ></app-game-card>
+    </div>
+  </div>
+  <div class="won-popup" *ngIf="endingGameProp">
+    <p>You Won The Game</p>
+    <button (click)="resetTheGame()">New Game</button>
+  </div>
+  <div class="overlay" *ngIf="endingGameProp"></div>
+</div>

@@ -1,0 +1,38 @@
+.parent-box {
+  width: 100%;
+  height: 100%;
+  perspective: 600px;
+  .child-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    background-color: white;
+    border-radius: 20px;
+    transition: transform 1s;
+    transform-origin: right center;
+    cursor: pointer;
+    &.test-clicked,
+    &.confirm-clicked {
+      transform: translateX(-100%) rotateY(-180deg);
+    }
+    .face {
+      position: absolute;
+      backface-visibility: hidden;
+      &.front {
+      }
+      &.back {
+        transform: rotateY(180deg);
+        .f-icon {
+          font-size: 80px;
+          color: #53007a;
+          @media (max-width: 580px) {
+            font-size: 60px;
+          }
+        }
+      }
+    }
+  }
+}

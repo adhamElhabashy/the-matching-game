@@ -1,0 +1,17 @@
+<div class="parent-box" *ngFor="let icon of icons; let i = index">
+  <div
+    class="child-box"
+    (click)="displayTheCheck(icon.mainIcon.iconName, ChildEle, i)"
+    [ngClass]="{
+      'test-clicked': icon.tested,
+      'confirm-clicked': icon.confirmed
+    }"
+    id="{{ i }}"
+    #ChildEle
+  >
+    <div class="face front"></div>
+    <div class="face back">
+      <fa-icon [icon]="icon.mainIcon" class="f-icon"></fa-icon>
+    </div>
+  </div>
+</div>

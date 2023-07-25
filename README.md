@@ -1,4 +1,5 @@
 # Matching Game
+![Matching Game.png](My Computer/Desktop/Javatpoint.png)
 ## Overview
 This is project is a matching game created with angular. It has the normal rules of matching games with stars rating, timer, moves counter, and reset button.
 ## Features
